@@ -1,6 +1,5 @@
 <template>
   <div>
-    // Search input to filters restaurants
     <form class="uk-search uk-search-large uk-align-center uk-margin">
       <span uk-search-icon></span>
       <input
@@ -10,8 +9,6 @@
         placeholder="Search..."
       />
     </form>
-
-    // Restaurant cards
     <div
       v-for="restaurant in filteredList"
       :key="restaurant"
@@ -58,7 +55,7 @@
 
 <script>
 // Import the restaurants query
-import restaurantsQuery from '~/apollo/queries/restaurant/restaurants'
+import restaurantsQuery from '~/apollo/queries/restaurant/restaurants.gql'
 
 export default {
   data() {

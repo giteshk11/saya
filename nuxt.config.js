@@ -56,7 +56,15 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    '@nuxtjs/apollo',
   ],
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'http://localhost:1337/graphql',
+      },
+    },
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
