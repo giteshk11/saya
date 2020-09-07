@@ -11,13 +11,13 @@
     </form>
     <div
       v-for="restaurant in filteredList"
-      :key="restaurant"
+      :key="restaurant.id"
       class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin"
       uk-grid
     >
       <div class="uk-card-media-left uk-cover-container">
         <img
-          :src="'http://localhost:1337/' + restaurant.image.url"
+          :src="'http://localhost:1337' + restaurant.image.url"
           alt=""
           uk-cover
         />
@@ -27,7 +27,6 @@
         <div class="uk-card-body">
           <h3 class="uk-card-title">{{ restaurant.name }}</h3>
           <p>{{ restaurant.description }}</p>
-          // Link to the restaurant using router-link
           <router-link
             :to="{ name: 'restaurants-id', params: { id: restaurant.id } }"
             tag="a"
@@ -37,8 +36,6 @@
         </div>
       </div>
     </div>
-
-    // If no restaurants have been found
     <div
       v-if="filteredList.length == 0"
       class="uk-container uk-container-center uk-text-center"
