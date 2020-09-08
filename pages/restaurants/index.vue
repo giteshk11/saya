@@ -17,7 +17,7 @@
     >
       <div class="uk-card-media-left uk-cover-container">
         <img
-          :src="'http://localhost:1337' + restaurant.image.url"
+          :src="'http://13.212.85.120:1337' + restaurant.image.url"
           alt=""
           uk-cover
         />
